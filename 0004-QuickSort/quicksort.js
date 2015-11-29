@@ -29,14 +29,14 @@ function quicksort(A, lo, hi){
 	if (lo < hi){
 		var p = partition(A, lo, hi);
 		quicksort(A, lo, p - 1);
-		quicksort(A, p+1, hi);
+		quicksort(A, p, hi);
 	}
 	//console.log(A);
 }
 function partition(A, lo, hi){
 	var pivot = A[hi];
 	var i = lo;
-	for (var j = lo; j < hi - 1; j++){
+	for (var j = lo; j < hi; j++){
 		if (A[j] <= pivot){
 			var tmp = A[j];
 			A[j] = A[i];
@@ -44,9 +44,11 @@ function partition(A, lo, hi){
 			i = i + 1;
 		}
 	}
-	var tmp = A[hi];
-	A[hi] = A[i];
-	A[i] = tmp;
+	if (A[hi] < A[i]){
+		var tmp = A[hi];
+		A[hi] = A[i];
+		A[i] = tmp;
+	}
 	//console.log(A);
 	return i;
 }

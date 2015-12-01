@@ -33,7 +33,7 @@ console.log(array);
 */
 
 function mergeSort(arrayIn){
-	if (arrayIn.length == 0){
+	if (arrayIn.length <= 1){
 		return arrayIn;
 	}
 	var left = [];
@@ -48,8 +48,12 @@ function mergeSort(arrayIn){
 			right.push(arrayIn[i]);
 		}
 	}
-	left = mergeSort(left);
-	right = mergeSort(right);
+	if (left.length > 0){
+		left = mergeSort(left);
+	}
+	if (right.length > 0){
+		right = mergeSort(right);
+	}
 	return merge(left, right);
 }
 

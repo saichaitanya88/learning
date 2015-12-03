@@ -1,6 +1,8 @@
 //Remove duplicates in a String in place
 // makes use of javascript slice method
 var myString = 'afadfhadf89h3l1fhaldfhadf';
+// complexity - O(n/2) = O(n);
+// possibly faster complexity if this is combined with divide/conquer approach
 function removeDuplicates(input){
 	for(var i = 0; i < input.length/2; i++){
 		console.log(

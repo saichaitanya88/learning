@@ -29,6 +29,7 @@ function generateSubsets(array){
 	}
 }
 
+//http://stackoverflow.com/a/10073788/3892730
 function pad(n, width, z) {
   z = z || '0';
   n = n + '';

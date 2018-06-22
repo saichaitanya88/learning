@@ -199,4 +199,6 @@ describe("Design LinkedList", () => {
         var results = JSON.stringify(instructionRunner(instructions, params));
         expect(results).toEqual("[null,-1,null,-1,-1,null,1,-1]");
     });
+
+    // Passes all cases 53/53 (80ms)
 })

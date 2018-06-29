@@ -19,7 +19,6 @@ describe("FizzBuzz", () => {
             return fb;
         };
         var results = fizzBuzz(15);
-        console.log("results", results);
         expect(results[0]).toBe("1");
         expect(results[2]).toBe("Fizz");
         expect(results[4]).toBe("Buzz");

@@ -1,6 +1,6 @@
 describe("reverseVowelsOfAString", () => {
     it("", () => {
-        var vowels = "aeiou";
+        var vowels = "aeiouAEIOU";
         var reverseVowels = function (s) {
             var strArray = s.split('');
             var vowelIndexes = strArray
